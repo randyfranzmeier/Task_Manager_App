@@ -2,23 +2,23 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.get("/getAllTasks", (req, res) => {
+app.get("/api/getAllTasks", (req, res) => {
     res.send("get all tasks")
 })
 
-app.get("/getSingleTask/:id", (req, res) => {
+app.get("/api/getSingleTask/:id", (req, res) => {
     res.send("get Single task")
 })
 
-app.put("/addTask", (req, res) => {
+app.put("/api/addTask", (req, res) => {
     res.send("add task")
 })
 
-app.post("/updateTask", (req, res) => {
+app.post("/api/updateTask", (req, res) => {
     res.send("update task")
 })
 
-app.delete("/deleteTask", (req, res) => {
+app.delete("/api/deleteTask", (req, res) => {
     res.send("delete Task")
 })
 
