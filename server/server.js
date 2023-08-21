@@ -6,7 +6,7 @@ app.get("/getAllTasks", (req, res) => {
     res.send("get all tasks")
 })
 
-app.get("/getSingleTask", (req, res) => {
+app.get("/getSingleTask/:id", (req, res) => {
     res.send(" get Single task")
 })
 
