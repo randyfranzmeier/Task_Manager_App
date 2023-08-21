@@ -1,5 +1,5 @@
-const express = require('express');
-const app = require(express)
+const express = require('express')
+const app = express()
 const port = 3000
 
 app.get("/getAllTasks", (req, res) => {
@@ -7,10 +7,10 @@ app.get("/getAllTasks", (req, res) => {
 })
 
 app.get("/getSingleTask/:id", (req, res) => {
-    res.send(" get Single task")
+    res.send("get Single task")
 })
 
-http.put("/addTask", (req, res) => {
+app.put("/addTask", (req, res) => {
     res.send("add task")
 })
 
@@ -23,6 +23,7 @@ app.delete("/deleteTask", (req, res) => {
 })
 
 
-app.listen(port, console.log("server listening on port 3000"))
+app.listen(port, () =>
+{ console.log("server listening on port 3000")})
 
 
