@@ -10,11 +10,11 @@ app.get("/api/getSingleTask/:id", (req, res) => {
     res.send("get Single task")
 })
 
-app.put("/api/addTask", (req, res) => {
+app.post("/api/addTask", (req, res) => {
     res.send("add task")
 })
 
-app.post("/api/updateTask", (req, res) => {
+app.put("/api/updateTask", (req, res) => {
     res.send("update task")
 })
 
