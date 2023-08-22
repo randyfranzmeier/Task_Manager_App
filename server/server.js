@@ -7,11 +7,11 @@ app.get("/api/getAllTasks", (req, res) => {
 })
 
 app.get("/api/getSingleTask/:id", (req, res) => {
-    res.send("get Single task")
+    res.json({id:req.params.id})
 })
 
 app.post("/api/addTask", (req, res) => {
-    res.send("add task")
+    res.json(req.body)
 })
 
 app.put("/api/updateTask", (req, res) => {
