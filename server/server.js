@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+require('../MongoDB/db')
 const port = 3000
 
 app.get("/api/getAllTasks", (req, res) => {
