@@ -1,6 +1,6 @@
+const callDB = require('../MongoDB/db')
 const express = require('express')
 const app = express()
-require('../MongoDB/db')
 const port = 3000
 
 app.get("/api/getAllTasks", (req, res) => {
@@ -23,8 +23,18 @@ app.delete("/api/deleteTask/:id", (req, res) => {
     res.json({id: req.params.id})
 })
 
+const startDB = async () => {
+try {
+    await callDB
+    app.listen(port, () =>
+    { console.log("server listening on port 3000")})
+}
+catch (err){
+    console.error(err)
+}
+}
 
-app.listen(port, () =>
-{ console.log("server listening on port 3000")})
+startDB()
+
 
 
