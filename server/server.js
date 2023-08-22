@@ -1,4 +1,5 @@
 const callDB = require('../MongoDB/db')
+require('dotenv').config()
 const express = require('express')
 const app = express()
 const port = 3000
@@ -25,7 +26,7 @@ app.delete("/api/deleteTask/:id", (req, res) => {
 
 const startDB = async () => {
 try {
-    await callDB
+    await callDB(process.env.URI)
     app.listen(port, () =>
     { console.log("server listening on port 3000")})
 }
