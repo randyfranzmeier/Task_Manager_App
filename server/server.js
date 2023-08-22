@@ -11,15 +11,15 @@ app.get("/api/getSingleTask/:id", (req, res) => {
 })
 
 app.post("/api/addTask", (req, res) => {
-    res.json(req.body)
+    res.send("new task")
 })
 
-app.put("/api/updateTask", (req, res) => {
-    res.send("update task")
+app.patch("/api/updateTask/:id", (req, res) => {
+    res.json({id: req.params.id})
 })
 
-app.delete("/api/deleteTask", (req, res) => {
-    res.send("delete Task")
+app.delete("/api/deleteTask/:id", (req, res) => {
+    res.json({id: req.params.id})
 })
 
 
