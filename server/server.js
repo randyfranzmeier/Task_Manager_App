@@ -1,7 +1,8 @@
 const callDB = require('../MongoDB/db')
-require('dotenv').config()
+//require('dotenv').config()
 const express = require('express')
 const app = express()
+const Task = require('../schema/taskModel')
 const port = 3000
 
 app.get("/api/getAllTasks", (req, res) => {
@@ -12,8 +13,9 @@ app.get("/api/getSingleTask/:id", (req, res) => {
     res.json({id:req.params.id})
 })
 
-app.post("/api/addTask", (req, res) => {
-    res.send("new task")
+app.post("/api/addTask", async (req, res) => {
+    const task = await Task.create(req.body)
+    res.status(201).json({task})
 })
 
 app.patch("/api/updateTask/:id", (req, res) => {
@@ -26,7 +28,7 @@ app.delete("/api/deleteTask/:id", (req, res) => {
 
 const startDB = async () => {
 try {
-    await callDB(process.env.URI)
+    await callDB
     app.listen(port, () =>
     { console.log("server listening on port 3000")})
 }

@@ -1,7 +1,8 @@
 const mongoose = require('mongoose')
+require('dotenv').config()
 
-const callDB = (uri) =>{
-     return mongoose.connect(uri)
+const callDB = () =>{
+     return mongoose.connect(process.env.URI)
 }
 
 module.exports = callDB
