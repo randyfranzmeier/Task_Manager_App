@@ -15,7 +15,7 @@ app.get("/api/getSingleTask/:id", (req, res) => {
 
 app.post("/api/addTask", async (req, res) => {
     const task = await Task.create(req.body)
-    res.status(201).json({task})
+    res.status(201).json({ task })
 })
 
 app.patch("/api/updateTask/:id", (req, res) => {
@@ -28,7 +28,7 @@ app.delete("/api/deleteTask/:id", (req, res) => {
 
 const startDB = async () => {
 try {
-    await callDB
+    await callDB()
     app.listen(port, () =>
     { console.log("server listening on port 3000")})
 }
