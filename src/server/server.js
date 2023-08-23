@@ -1,9 +1,12 @@
+require('dotenv').config()
 const callDB = require('../MongoDB/db')
 //require('dotenv').config()
 const express = require('express')
 const app = express()
 const Task = require('../schema/taskModel')
 const port = 3000
+//if(process.env.NODE_ENV !== 'production')  { //only show private var if not in production mode
+//}
 
 app.get("/api/getAllTasks", (req, res) => {
     res.send("get all tasks")
@@ -28,7 +31,7 @@ app.delete("/api/deleteTask/:id", (req, res) => {
 
 const startDB = async () => {
 try {
-    await callDB()
+    await callDB(process.env.MONGO_URI)
     app.listen(port, () =>
     { console.log("server listening on port 3000")})
 }
