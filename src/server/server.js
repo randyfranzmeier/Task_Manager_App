@@ -1,46 +1,28 @@
-require('dotenv').config()
+const path = require('path')
+require('dotenv').config({ path: path.resolve(__dirname, '../../.env') })
+
 const callDB = require('../MongoDB/db')
-//require('dotenv').config()
 const express = require('express')
 const app = express()
-const Task = require('../schema/taskModel')
-const port = 3000
+app.use(express.static('./src'))
+const port = process.env.PORT || 3000
 //if(process.env.NODE_ENV !== 'production')  { //only show private var if not in production mode
 //}
 
-app.get("/api/getAllTasks", (req, res) => {
-    res.send("get all tasks")
-})
-
-app.get("/api/getSingleTask/:id", (req, res) => {
-    res.json({id:req.params.id})
-})
-
-app.post("/api/addTask", async (req, res) => {
-    const task = await Task.create(req.body)
-    res.status(201).json({ task })
-})
-
-app.patch("/api/updateTask/:id", (req, res) => {
-    res.json({id: req.params.id})
-})
-
-app.delete("/api/deleteTask/:id", (req, res) => {
-    res.json({id: req.params.id})
-})
-
-const startDB = async () => {
+//start the server if database is connected correctly
+const start = async () => {
 try {
-    await callDB(process.env.MONGO_URI)
+    const uri = process.env.MONGO_URI
+    await callDB(uri)
     app.listen(port, () =>
-    { console.log("server listening on port 3000")})
+    { console.log('server listening on port ' + JSON.stringify(port))})
 }
 catch (err){
     console.error(err)
 }
-}
+} 
 
-startDB()
+start()
 
 
 
