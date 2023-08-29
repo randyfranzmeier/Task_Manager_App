@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { Task } from './task/task.component';
 import { FormsModule } from '@angular/forms';
 import { Layout } from './layout/layout.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Task,
-    Layout
+    Layout,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
