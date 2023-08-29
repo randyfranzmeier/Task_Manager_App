@@ -6,7 +6,7 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
+<html>
 <style>
  
  
@@ -16,7 +16,6 @@
     <meta charset="utf-8"/>
     <!-- <link rel="stylesheet" href="styles.css"/> -->
 </head>
-<div id="wholePage">
 
   <body>
       <nav >
@@ -24,30 +23,11 @@
       </nav>
       
       <h1>Note Pro Task Manager</h1>
-      <div id="container">
-          <div id="textBox">
-              <textarea id="NoteBox" name="noteArea" rows="4" cols="90">
-                  (Type here)
-              </textarea>
-          </div>
-          
-          <div id="buttonContainer">
-              <button id="add">New Task</button>
-              <button id="delete">Delete Task</button>
-          </div>
-          
-      </div>
+      <app-task></app-task>
+      
   </body>
    
      
-      <app-task></app-task>
-</div>
-
-
-
-
- 
-  
 
 
 
@@ -71,3 +51,4 @@
 
 
 <router-outlet></router-outlet>
+</html>

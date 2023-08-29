@@ -1,0 +1,29 @@
+
+ #textBox, #buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .container {
+    border-left: 4px solid gold;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+button {
+    background-color:rgb(108, 108, 106);
+    border-radius: 20px;
+}
+
+button:hover {
+    transition: color 250ms ease 50ms;
+    filter: brightness(200%);
+    box-shadow: 5px 5px 5px #3b3535;
+}
+
+
+button:active {
+    box-shadow: inset 2px 2px 5px #3b3535;
+}
