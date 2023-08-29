@@ -1,0 +1,18 @@
+ul {
+    list-style-type: none;
+}
+#navList {
+    display: flex;
+    justify-content: center;
+
+}
+
+nav ul li {
+    color: black;
+    font-weight: bold;
+    font-style: oblique;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 0.6%;
+    padding-bottom: 0.6%;
+}

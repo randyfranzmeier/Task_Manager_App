@@ -12,40 +12,38 @@
  
 </style>
 
-<title>NPTM</title>
 <head> 
     <meta charset="utf-8"/>
     <!-- <link rel="stylesheet" href="styles.css"/> -->
 </head>
+<div id="wholePage">
 
-
-<body>
-    <nav id="navBar" >
-        <ul id="navList">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Contact</li>
-        </ul>
-    </nav>
-    
-    <h1>Note Pro Task Manager</h1>
-    <div id="container">
-        <div id="textBox">
-            <textarea id="NoteBox" name="noteArea" rows="4" cols="90">
-                (Type here)
-            </textarea>
-        </div>
-        
-        <div id="buttonContainer">
-            <button id="add">New Task</button>
-            <button id="delete">Delete Task</button>
-        </div>
-        
-    </div>
-</body>
- 
+  <body>
+      <nav >
+        <app-layout></app-layout>
+      </nav>
+      
+      <h1>Note Pro Task Manager</h1>
+      <div id="container">
+          <div id="textBox">
+              <textarea id="NoteBox" name="noteArea" rows="4" cols="90">
+                  (Type here)
+              </textarea>
+          </div>
+          
+          <div id="buttonContainer">
+              <button id="add">New Task</button>
+              <button id="delete">Delete Task</button>
+          </div>
+          
+      </div>
+  </body>
    
-    <app-task></app-task>
+     
+      <app-task></app-task>
+</div>
+
+
 
 
  

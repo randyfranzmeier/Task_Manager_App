@@ -1,6 +1,9 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter} from "@angular/core";
+
 @Component({
     selector: 'app-task',
-    template: '<p>Task Component<p>'
+    template: '<input type="text" [(ngModel)]="name" ><p>Task Component <p><br><p> Hello {{ name }}<p>'
 })
-export class Task {}
+export class Task {
+    name = 'myName';
+}
