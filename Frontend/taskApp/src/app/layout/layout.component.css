@@ -1,20 +1,8 @@
-ul {
-    list-style-type: none;
-}
-li {
-    display: inline;
-}
-#navList {
-    display: flex;
-    justify-content: center;
 
-}
 nav ul li {
-    color: black;
+    color: grey;
     font-weight: bold;
     font-style: oblique;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 0.6%;
-    padding-bottom: 0.6%;
+    padding-left: 50%;
+    padding-right: 50%;
 }
