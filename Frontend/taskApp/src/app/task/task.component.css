@@ -11,6 +11,12 @@ input.description  {
     box-sizing: border-box;
 }
 
+@keyframes colorAnimation {
+    0%   {background-color: white;}
+    25%  {background-color: yellow;}
+    50%  {background-color: green;}
+    100% {background-color: red;}
+  }
  form.container {
     border-left: 4px solid black;
     border-right: 1px solid black;
@@ -21,11 +27,13 @@ input.description  {
     height:fit-content;
     width: 45%;
     background-color:white;
-
 }
 .complete {
     display:flex;
     float:right;
+    animation-name: colorAnimation;
+    animation-duration: 3s;
+    animation-iteration-count: 2;
 }
 
 label.complete{
