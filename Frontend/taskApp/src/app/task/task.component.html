@@ -1,11 +1,15 @@
-<div class="container">
-    <label for="title">enter task title</label> <br>
-    <input id="title" type="text"> <br>
-    
 
+    <form class="container">
+        <label for="checkBox" class="complete">complete<input id="checkBox" type="checkbox"></label><br>
+        <div class="inputContainer">
+            <h3 >Task</h3> <br>
+            Title:<input id="title" type="text"> 
+            Description: <input class="description" type="text" ngModel="taskDesc">
+        </div>
+      
+    </form>
 
-<div id="buttonContainer">
+<!-- <div id="buttonContainer">
     <button id="add">New Task</button>
     <button id="delete">Delete Task</button>
-</div>
-</div>
+</div> -->
