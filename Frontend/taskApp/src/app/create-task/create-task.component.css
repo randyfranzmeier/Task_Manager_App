@@ -15,9 +15,13 @@ textarea  {
 .create {
     display:flex;
     float:right;
+    margin-top: 1%;
     font-weight: bold;
 }
 
+#description {
+    resize: none;
+}
 
 .inputContainer {
     margin:auto;

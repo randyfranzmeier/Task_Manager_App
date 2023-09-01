@@ -10,6 +10,9 @@
     75%  {background-color: yellow;}
     100% {background-color: red;}
   }
+
+
+
  form.container {
     border-left: 7px solid purple;
     border-right: 1px solid black;
@@ -21,14 +24,16 @@
     height:fit-content; 
     width: 40%;
     background-color:white;
-}
+    margin-top: 2%;
+ }
 .complete {
     display:flex;
     float:right;
+    margin-top: 1%;
     font-weight: bold;
     animation-name: colorAnimation;
     animation-duration: 3s;
-    animation-iteration-count: 2;
+    animation-iteration-count: 1;
 }
 
 label.complete{
