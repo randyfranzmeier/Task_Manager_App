@@ -14,7 +14,7 @@
 
 
  form.container {
-    border-left: 7px solid purple;
+    border-left: 7px solid black;
     border-right: 1px solid black;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
@@ -42,9 +42,9 @@ label.complete{
 }
 
 .inputContainer {
-    margin:auto;
-    width:10%;
-    height: fit-content;
+     margin:auto;
+     width:70%;
+     height:fit-content
 }
 
 button {

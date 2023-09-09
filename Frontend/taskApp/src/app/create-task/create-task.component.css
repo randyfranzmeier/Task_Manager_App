@@ -1,16 +1,16 @@
 textarea  {
-    width: 300%;
+    width: 75%;
     height:200%;
 }
 
  form.container {
     border: 1px solid black;
-    border-radius: 25px;
     padding-left: 0%;
     padding-right: 5%;
     height:fit-content;
     width: 40%;
     background-color:white;
+    border-radius: 25px;
 }
 .create {
     display:flex;
@@ -25,7 +25,7 @@ textarea  {
 
 .inputContainer {
     margin:auto;
-    width:10%;
+    width:70%;
     height: fit-content;
 }
 
