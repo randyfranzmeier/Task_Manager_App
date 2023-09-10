@@ -6,19 +6,26 @@ import { AppComponent } from './app.component';
 import { Task } from './task/task.component';
 import { FormsModule } from '@angular/forms';
 import { Layout } from './layout/layout.component';
+import { SearchComponent } from './search/search.component';
+import { CreateTaskComponent } from './create-task/create-task.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     Task,
-    Layout
+    Layout,
+    SearchComponent,
+    CreateTaskComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

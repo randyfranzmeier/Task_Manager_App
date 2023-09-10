@@ -6,6 +6,7 @@ import { Component, EventEmitter} from "@angular/core";
     styleUrls: ['./task.component.css']
 })
 export class Task {
-    name = 'myName';
+   Task(titleControl:string, desControl: String) {
+   }
 }
 // template: '<input type="text" [(ngModel)]="name" ><p>Task Component <p><br><p> Hello {{ name }}<p>'
