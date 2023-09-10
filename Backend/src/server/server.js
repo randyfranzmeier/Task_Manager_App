@@ -6,8 +6,6 @@ const express = require('express')
 const app = express()
 app.use(express.static('./src'))
 const port = process.env.PORT || 3000
-//if(process.env.NODE_ENV !== 'production')  { //only show private var if not in production mode
-//}
 
 //start the server if database is connected correctly
 const start = async () => {

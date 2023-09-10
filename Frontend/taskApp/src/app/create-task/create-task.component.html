@@ -2,7 +2,7 @@
     <button class="create" style="background-color: rgb(121, 245, 126);" type="submit">create task</button><br>
     <div class="inputContainer">
         <h1 >Task</h1> <br>
-        <h2>Title:</h2><input id="title" type="text" [(ngModel)]="titleControl"> 
-        <h2>Description:</h2> <textarea id="description" [(ngModel)]="desControl"></textarea>
+        <h2>Title:</h2><input placeholder="title" id="title" type="text" [(ngModel)]="title" (input)="setTitle($event)"> 
+        <h2>Description:</h2> <textarea placeholder="(optional)" id="description" [(ngModel)]="description" (input)="setDesc($event)"></textarea>
     </div>
 </form>

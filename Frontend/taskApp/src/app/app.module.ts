@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { Layout } from './layout/layout.component';
 import { SearchComponent } from './search/search.component';
 import { CreateTaskComponent } from './create-task/create-task.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import { CreateTaskComponent } from './create-task/create-task.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
