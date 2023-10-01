@@ -9,19 +9,15 @@ import { FormControl } from '@angular/forms';
 })
 export class CreateTaskComponent {
 //  send it to task comp, call fetch, display on screen
-  // @Input() title!: string;
-  // @Input() description!: string;
-  // @Output() titleChange = new EventEmitter<string>();
-  // @Output() descriptionChange = new EventEmitter<string>();
   title!: string;
   description!: string;
   
  setTitle = (e: any) =>{
-  this.title = e.target.value
+  this.title = e.target.value;
  }
 
  setDesc = (e: any) =>{
-  this.description = e.target.value
+  this.description = e.target.value;
  }
 
 taskData(e: Event) {
@@ -30,8 +26,31 @@ taskData(e: Event) {
     window.alert("title is required")
   }
   else {
-    window.alert("title: " + this.title + " description: " + this.description)
+    //window.alert("title: " + this.title + " description: " + this.description)
+    const data = {title: this.title, description: this.description}
+    this.postData(data);
+  }
+}
+
+ async postData(data:object) { 
+  
+  try {
+    const response = await fetch("/api/addTask", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+
+    const success = await response.json();
+    console.log("success: " + success)
+  }
+  catch(error) {
+    console.error("Error: " + error);
   }
 }
 }
+
+
 
