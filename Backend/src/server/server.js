@@ -11,7 +11,9 @@ const AsyncWrapper = require('../middleware/AsyncWrapper')
 const eHandler = require('../middleware/eHandler')
 app.use(eHandler)
 const callDB = require('../MongoDB/db')
+const cors = require('cors')
 const port = process.env.PORT || 3000
+app.use(cors())
 
 app.get("/api/getAllTasks", AsyncWrapper(async (req, res) => {
     const task = await Task.find({})
@@ -28,6 +30,7 @@ app.get("/api/getSingleTask/:id", AsyncWrapper(async(req, res) => {
 }))
 
 app.post("/api/addTask", AsyncWrapper(async (req, res) => {
+    console.log("api was called")
     const task = await Task.create(req.body)
     res.status(200).json({task})
 }))

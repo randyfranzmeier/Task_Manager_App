@@ -44,10 +44,10 @@ taskData(e: Event) {
     })
 
     const success = await response.json();
-    console.log("success: " + success)
+    alert("success: " + success);
   }
   catch(error) {
-    console.error("Error: " + error);
+    alert("Error: " + error);
   }
 }
 }
