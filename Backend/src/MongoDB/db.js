@@ -5,3 +5,5 @@ const callDB = async (MONGO_URI) =>{
 }
 
 module.exports = callDB
+
+

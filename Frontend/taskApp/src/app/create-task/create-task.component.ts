@@ -1,16 +1,16 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { NgModel} from '@angular/forms';
-import { FormControl } from '@angular/forms';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-create-task',
   templateUrl: './create-task.component.html',
   styleUrls: ['./create-task.component.css']
 })
-export class CreateTaskComponent {
-//  send it to task comp, call fetch, display on screen
-  title!: string;
-  description!: string;
+export class CreateTaskComponent{
+
+ title!: string;
+ description!: string;
+
   
  setTitle = (e: any) =>{
   this.title = e.target.value;
@@ -21,22 +21,22 @@ export class CreateTaskComponent {
  }
 
 taskData(e: Event) {
-  e.preventDefault();
+  //e.preventDefault();
   if(this.title == undefined || this.title === '') {
     window.alert("title is required")
   }
-  else {
-    //window.alert("title: " + this.title + " description: " + this.description)
-    const data = {title: this.title, description: this.description}
+  else {   
+    const data = {title: this.title, description: this.description, completed: false};
     this.postData(data);
   }
 }
 
- async postData(data:object) { 
+ async postData(data:any) { 
   
   try {
-    const response = await fetch("/api/addTask", {
+    const response = await fetch('http://localhost:3000/api/getAllTasks', {
       method: "POST",
+      mode: 'cors',
       headers: {
         "Content-Type": "application/json",
       },
@@ -44,10 +44,10 @@ taskData(e: Event) {
     })
 
     const success = await response.json();
-    alert("success: " + success);
+    alert("success: " + success); //switch to console.log when this works
   }
   catch(error) {
-    alert("Error: " + error);
+    alert("An Error Occured: " + error);
   }
 }
 }
