@@ -33,14 +33,13 @@ taskData(e: Event) {
 
  async postData(data:any) { 
   
-  try {
-    const response = await fetch('http://localhost:3000/api/getAllTasks', {
-      method: "POST",
+  try { 
+    const response = await fetch('http://localhost:3005/api/getAllTasks', {
+      method: "GET",
       mode: 'cors',
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
     })
 
     const success = await response.json();
