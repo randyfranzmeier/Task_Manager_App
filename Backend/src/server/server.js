@@ -10,6 +10,7 @@ const eHandler = require('../middleware/eHandler.js');
 app.use(eHandler);
 const callDB = require('../MongoDB/db.js');
 const cors = require('cors');
+//const { cwd } = require('process');
 const port = process.env.PORT || 3005;
 app.use(cors());
 
@@ -30,15 +31,15 @@ app.get("/api/getSingleTask/:id", AsyncWrapper(async (req, res) => {
 }));
 
 app.post("/api/addTask", AsyncWrapper(async (req, res) => {
-    // res.header('Access-Control-Allow-Origin', '*');
+     res.header('Access-Control-Allow-Origin', '*');
     try {
         if (req.body.description != '' || req.body.description != NULL) {
             const task = await Task.create({ title: req.body.title, description: req.body.description, completed: req.body.completed });
-            res.status(200).json({ task });
+            res.status(200).json({status: "success"});
         }
         else { //no description provided
             const task = await Task.create({ title: req.body.title, completed: req.body.completed });
-            res.status(200).json({ task });
+            res.status(200).json({ status: "success" });
         }
     }
     catch (err) {

@@ -30,8 +30,9 @@ textarea  {
 }
 
 button {
-    background-color:rgb(108, 108, 106);
+    background-color:lightgray;
     border-radius: 20px;
+   color: black;
 }
 
 button:hover {
@@ -42,5 +43,5 @@ button:hover {
 
 
 button:active {
-    box-shadow: inset 2px 2px 5px #40f0a4;
+    box-shadow: inset 2px 2px 5px #79797c;
 }

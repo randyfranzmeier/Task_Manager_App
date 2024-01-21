@@ -34,19 +34,21 @@ taskData(e: Event) {
  async postData(data:any) { 
   
   try { 
-    const response = await fetch('http://localhost:3005/api/getAllTasks', {
-      method: "GET",
+    const response = await fetch('http://localhost:3005/api/addTask', {
+      method: "POST",
       mode: 'cors',
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
 
-    const success = await response.json();
-    alert("success: " + success); //switch to console.log when this works
+    await response.json();
+    console.log("task added!"); //display added task on page
   }
   catch(error) {
-    alert("An Error Occured: " + error);
+    console.log("Unable to save task");
+  }
+  finally {
+    window.location.reload();
   }
 }
 }

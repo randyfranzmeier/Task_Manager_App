@@ -1,0 +1,63 @@
+textarea  {
+    width: 300%;
+    height:200%;
+}
+
+@keyframes colorAnimation {
+    0%   {background-color: white;}
+    25%  {background-color: green;}
+    75%  {background-color: yellow;}
+    100% {background-color: red;}
+  }
+
+
+
+ form.container {
+    border-left: 7px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-radius: 25px;
+    padding-left: 0%;
+    padding-right: 5%;
+    height:fit-content; 
+    width: 40%;
+    background-color:white;
+    margin-top: 2%;
+ }
+.complete {
+    display:flex;
+    float:right;
+    margin-top: 1%;
+    font-weight: bold;
+    animation-name: colorAnimation;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+label.complete{
+    border-left: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+.inputContainer {
+     margin:auto;
+     width:70%;
+     height:fit-content
+}
+
+button {
+    background-color:rgb(108, 108, 106);
+    border-radius: 20px;
+}
+
+button:hover {
+    transition: color 250ms ease 50ms;
+    filter: brightness(100%);
+    box-shadow: 5px 5px 5px #3b3535;
+}
+
+
+button:active {
+    box-shadow: inset 2px 2px 5px rgb(108, 108, 106);
+}
