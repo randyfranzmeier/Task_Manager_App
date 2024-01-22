@@ -10,7 +10,18 @@ import { CommonModule } from '@angular/common';
 })
 export class TaskViewableComponent {
   @Input() task!: any;
-  deleteTask = (event: Event) =>{
-    console.log("delete task works!!!");
+  
+  deleteTask = async(id: number) =>{
+    await fetch(`http://localhost:3005/api/deleteTask/${id}`, {
+      method: "DELETE",
+      mode: "cors",
+      headers: {"content-type":"application/json"},
+    }).then(response =>{ if(response.ok) {
+      console.log("successfully deleted task!")
+    }})
+    .catch(err =>console.log(err))
+    .finally(() =>{
+      window.location.reload();
+    })
   }
 }

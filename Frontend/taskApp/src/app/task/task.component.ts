@@ -24,9 +24,9 @@ export class Task implements AfterViewInit{
             headers: { "Content-Type": "application/json" },
         }).then(response =>response.json())
         .then(task =>task.task);
+        //console.log(this.taskArray[0]._id)
     }
 
- 
     
 
 //    loadAllTasks = async()=> {

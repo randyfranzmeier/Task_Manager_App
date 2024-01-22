@@ -1,6 +1,6 @@
 <form class="container">
     <h2 id="edit" style="float: left; height: fit-content;">&#xFE19;</h2>
-    <button class="complete" style="background-color: rgb(249, 234, 234);" (click)="deleteTask($event)">complete</button><br>
+    <button class="complete" style="background-color: rgb(249, 234, 234);" (click)="deleteTask(task._id)">complete</button><br>
     <div class="inputContainer">
         <h1 >{{task.title}} </h1> <br> <!--{titleControl}, {desControl}-->
         <p id="description" *ngIf="task.description">{{task.description}}</p>
