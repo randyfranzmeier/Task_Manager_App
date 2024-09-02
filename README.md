@@ -7,7 +7,7 @@ Randy Franzmeier
 
 # Setup
 ## Navigate to the backend folder > src > server > server.js
-run node server.js in the terminal to start the backend. Note this will also attempt to connect to MongoDB.
+Run node server.js in the terminal to start the backend. Note this will also attempt to connect to MongoDB.
 
 ## Navigate to the frontend folder > taskApp 
-run npm start in the terminal to start the frontend
+Run npm start in the terminal to start the frontend
